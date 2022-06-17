@@ -8,11 +8,22 @@ function Pizza([toppings], size) {
 
 const myPizza = new Pizza(["anchovies, pineapple"], "medium");
 
+function output([toppings], size) {
+  let orderArray = [];
+
+  if ([#size].toString("").includes("Medium")) {
+    orderArray.push("You ordered a medium pie with the following toppings: " + [toppings]);
+  }
+  if ([#size].toString("").includes("Large")) {
+    orderArray.push("You ordered a large pie with the following toppings: " + [toppings]);
+  }
+}
+return (orderArray + "");
+}
+
 
 
 // UI Logic
-
-let PizzaOrder = new Pizza([toppings], size);
 
 $(document).ready(function () {
   attachContactListeners();
@@ -22,12 +33,29 @@ $(document).ready(function () {
     const inputtedToppings = $("input:checkbox[name=pizza-topping]:checked").val();
     const inputtedSize = $('input:radio[name=size]:checked').val();
 
-    $("input:checkbox[name=pizza-topping]:checked").val();
+    $("input:checkbox[name=pizza-topping]:checked").each(function () {
+      const toppings = $(this).val();
+    }
     $('input:radio[name=size]:checked').val();
 
     let PizzaOrder = new Pizza(inputtedToppings, inputtedSize);
-    $("#cart").html(PizzaOrder + "");
+    $("#cart").text(PizzaOrder + "");
+    $('#options').hide();
+
+    const toppings = $("#pizza-topping").val ();
+    const result = output(number);
+    $("#output").html(result);
     
+  });
+});
+
+$(document).ready(function(){
+  $("form#options").submit(function(event){
+    event.preventDefault();
+    const toppings = $("#pizza-topping").val ();
+    const size = $("#size").val();
+    const result = output([toppings], size);
+    $("#output").html(result);
   });
 });
 
