@@ -5,6 +5,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<script src="js/jquery-3.6.0.js"></script>
+<script src="js/scripts.js"></script>
   <title>Back-Porch Pizza | Menu</title>
 </head>
 <body>
@@ -32,6 +34,32 @@
     <br>
   </nav>
   <div class="main">
+    <div>
+    
+      <form id="toppings">
+        <h3>Select Toppings</h3>
+        <div class="form-group">
+          <input type="checkbox" name="pizza-topping" value="Canned pineapple">Canned pineapple<br>
+          <input type="checkbox" name="pizza-topping" value="Canned olives">Canned olives<br>
+          <input type="checkbox" name="pizza-topping" value="Sundried tomatoes">Sundried tomatoes<br>
+          <input type="checkbox" name="pizza-topping" value="Expired feta">Expired feta<br>
+          <input type="checkbox" name="pizza-topping" value="Cream cheese globs">Cream cheese globs<br>
+          <input type="checkbox" name="pizza-topping" value="Green peppers">Green peppers<br>
+          <input type="checkbox" name="pizza-topping" value="Mushrooms">Mushrooms<br>
+          <input type="checkbox" name="pizza-topping" value="Leftover salmon">Leftover salmon<br>
+          <input type="checkbox" name="pizza-topping" value="Canned artichokes">Canned artichokes<br>
+          <input type="checkbox" name="pizza-topping" value="Olive oil">Olive oil drizzle<br>
+          <input type="checkbox" name="pizza-topping" value="Rancid garlic">Rancid garlic<br>
+          <input type="checkbox" name="pizza-topping" value="Basil with brown spots">Basil with brown spots<br>
+          <input type="checkbox" name="pizza-topping" value="Black pepper">Black pepper<br>
+        </div>
+        <br>
+        <button type="submit">Continue</button>
+      </form>
+      <span id="cart">
+        <p><b>You've selected the following toppings:</b></p>
+      </span>
+    </div>
     
   </div>
 </body>

@@ -150,3 +150,7 @@ input[type=submit]:hover {
   padding: 20px;
   margin-left: 40%;
 }
+
+#cart {
+  display: none;
+}
