@@ -36,6 +36,7 @@ h3 {
   font-size: 100%;
   background: white;
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 nav a:link, nav a:visited, nav a:hover, nav a:active {
@@ -151,6 +152,6 @@ input[type=submit]:hover {
   margin-left: 40%;
 }
 
-#cart {
+#cart, #size {
   display: none;
 }
