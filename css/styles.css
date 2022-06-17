@@ -1,0 +1,126 @@
+body {
+  font-family:sans-serif;
+  margin: 5%;
+  background-color: white;
+  padding: 2%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  color: rgb(246, 16, 16);
+  font-family: 'Lobster', cursive;
+  font-size: 400%;
+  background: white;
+  padding: 20px;
+}
+
+nav a:link, nav a:visited, nav a:hover, nav a:active {
+  background-color:white;
+  padding: 20px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: 'Lobster', cursive;
+  color: rgb(246, 16, 16);
+  font-size: 200%;
+}
+
+.navbar {
+  width: 400px;
+  height: 100%;
+  margin: 2%;
+  align-content: center;
+  color: white;
+  text-align: center;
+  border: none;
+  padding: 2%;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1;
+  top: 0; 
+  left: 0;
+  background: white;
+  background: url(/img/tile.JPG);
+  border:solid black;
+  border-width: 10px;
+  box-sizing: border-box;
+}
+
+.main {
+  margin-left: 40%;
+  max-width: 75%;
+  text-align: left;
+  height: auto;
+  width: auto\9; 
+  position: relative;
+  background-color: white;
+  padding: 50px;
+}
+
+ol {
+  list-style-type:lower-roman;
+  list-style-position: inside;
+}
+
+ul {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+.avatar-shape {
+  object-fit: cover;
+  border:solid black;
+  padding: 10px;
+  border-width: 10px;
+  box-sizing: border-box;
+}
+
+p.indent {
+  margin-left: 25%;
+  max-width: 50%;
+  text-align: left;
+  height: auto;
+  width: auto\9; 
+  position: relative;
+}
+
+.column {
+  width: 25%;
+  float: left;
+  padding: 10px;
+  padding-bottom: 50px;
+  margin: 10px;
+  border-width: 5px;
+  text-align: left;
+}
+
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc;  
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgb(246, 16, 16);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: white;
+  color: rgb(246, 16, 16);
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  margin-left: 40%;
+}
