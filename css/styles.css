@@ -11,19 +11,46 @@ h1 {
   font-family: 'Lobster', cursive;
   font-size: 400%;
   background: white;
+  padding: 10px;
+  border:solid black;
+  border-width: 10px;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: rgb(8, 127, 53);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-size: 100%;
+  background: white;
   padding: 20px;
+  border:solid black;
+  border-width: 10px;
+  box-sizing: border-box;
+}
+
+h3 {
+  color: rgb(8, 127, 53);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold;
+  font-size: 100%;
+  background: white;
+  padding-bottom: 20px;
 }
 
 nav a:link, nav a:visited, nav a:hover, nav a:active {
   background-color:white;
-  padding: 20px 50px;
+  padding: 10px 50px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   box-sizing: border-box;
   font-family: 'Lobster', cursive;
   color: rgb(246, 16, 16);
-  font-size: 200%;
+  font-size: 150%;
+  border:solid black;
+  border-width: 10px;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -71,7 +98,6 @@ ul {
 .avatar-shape {
   object-fit: cover;
   border:solid black;
-  padding: 10px;
   border-width: 10px;
   box-sizing: border-box;
 }
@@ -91,14 +117,14 @@ p.indent {
   padding: 10px;
   padding-bottom: 50px;
   margin: 10px;
-  border-width: 5px;
+  border-width: 10px;
   text-align: left;
 }
 
 input[type=text], select, textarea {
   width: 100%; 
   padding: 12px; 
-  border: 1px solid #ccc;  
+  border: 5px solid black;  
   box-sizing: border-box; 
   margin-top: 6px; 
   margin-bottom: 16px; 
