@@ -36,9 +36,9 @@
     <img src="img/3.JPG" width=100% alt="A photo of pizza">
     <div>
 
-      <form id="options"">
+      <form id="options">
         <h3>Select Toppings</h3>
-        <div class=" form-group">
+        <div class="form-group">
         <input type="checkbox" name="pizza-topping" value="Canned pineapple">Canned pineapple<br>
         <input type="checkbox" name="pizza-topping" value="Canned olives">Canned olives<br>
         <input type="checkbox" name="pizza-topping" value="Sundried tomatoes">Sundried tomatoes<br>
@@ -52,18 +52,21 @@
         <input type="checkbox" name="pizza-topping" value="Rancid garlic">Rancid garlic<br>
         <input type="checkbox" name="pizza-topping" value="Basil with brown spots">Basil with brown spots<br>
         <input type="checkbox" name="pizza-topping" value="Black pepper">Black pepper<br>
-
-        <!-- <h3>Select Size</h3>
-        <input type="radio" name="size" value="Medium" checked>Medium<br>
-        <input type="radio" name="size" value="Large">Large<br> -->
-
     </div>
     <input type="submit" value="Continue"></input>
     </form>
     <span id="cart">
-      <p><b>You have the following in your cart: <span id="ticket-price"></span></b></p>
+      <p><b>You've chosen the following:</b></p>
     </span>
-  </div>
+
+    <form id="options2">
+      <h3>Select Size</h3>
+      <div class="form-group">
+        <input type="radio" name="size" value="Medium" checked>Medium<br>
+        <input type="radio" name="size" value="Large">Large<br>
+      </div>
+      <input type="submit" value="Continue"></input>
+    </form>
 
   </div>
 </body>

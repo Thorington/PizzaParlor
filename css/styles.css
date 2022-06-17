@@ -154,6 +154,6 @@ input[type=submit]:hover {
   margin-left: 40%;
 }
 
-#cart {
+#cart, #finalCart, #options2 {
   display: none;
 }
