@@ -1,6 +1,22 @@
 
 // Business Logic
 
+function customPizza(size, toppings) {
+  this.size = size;
+  this.toppings = toppings;
+}
+
+customPizza.prototype.Order = function() {
+  return this.size + " " + this.toppings + " " + this.price;
+}
+
+
+
+
+
+
+
+
 // Total.prototype.calculateTotal = function() {
 
 //   const basePrice = 10;
@@ -28,19 +44,10 @@ $(document).ready(function() {
   $("form#options").submit(function(event) {
     event.preventDefault();
     $("#cart").show();
-    const size = $('input:radio[name=size]:checked').val();
-    const toppings = $("input:checkbox[name=pizza-topping]:checked").val();
-    const chosenOptions = (("Size: " + size) + ("Toppings: " + toppings));
-      $('#cart').append(chosenOptions + "<br>");
+    $("input:checkbox[name=pizza-topping]:checked").each(function(){
+      const toppings = $(this).val();
+      $("#cart").append(toppings + "<br>");
     });
     $('#options').hide();
   });
-
-
-// function getOrder() {
-//   const toppings = $('#toppings').text();
-//   const size = $('#size').text();
-//   const price = ((toppings * $2) + $10);
-  
-//   return new Order(toppings, size, price);
-// }
+});
