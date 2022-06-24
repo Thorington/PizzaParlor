@@ -8,14 +8,14 @@ function Pizza(toppings, size) {
 
 Pizza.prototype.cost = function () {
 
-  const basePrice = 10;
-  const toppings = [0];
+  const basePrice = 20;
+  const toppings = [this.toppings.length];
   let output = [basePrice + (toppings * 2)];
   if (this.size === "Medium") {
-    output[0] -= 2;
+    output[0] += 0;
   }
   if (this.size === "Large") {
-    output[0] += 2;
+    output[0] += 6;
   }
   return ("$" + output);
 };
@@ -33,8 +33,8 @@ $(document).ready(function () {
     $("input:checkbox[name=pizza-topping]:checked").each(function () {
       const toppingsInput = $(this).val();
       inputtedToppings.push(" " + toppingsInput.toLowerCase().toString());
-
     })
+
     const inputtedSize = $('input:radio[name=size]:checked').val();
 
     let myPizza = new Pizza(inputtedToppings, inputtedSize);
@@ -42,7 +42,6 @@ $(document).ready(function () {
     let result = ("One" + " " + myPizza.size.toLowerCase() + " " + "pizza" + " " + "with" + " " + inputtedToppings + ". " + "<br><br>" + "Your total today is" + " " + myPizza.cost()) + ". Thank you for your business!";
 
     $("#cart").append(result);
-    console.log(result);
 
     $('#options').hide();
   });
