@@ -1,63 +1,52 @@
 
-// // Business Logic
+// Business Logic
 
-function Pizza([toppings], size) {
-  this.toppings = [toppings];
+function Pizza(toppings, size) {
+  this.toppings = toppings;
   this.size = size;
 }
 
-const myPizza = new Pizza(["anchovies, pineapple"], "medium");
+Pizza.prototype.cost = function () {
 
-function output([toppings], size) {
-  let orderArray = [];
-
-  if ([#size].toString("").includes("Medium")) {
-    orderArray.push("You ordered a medium pie with the following toppings: " + [toppings]);
+  const basePrice = 10;
+  const toppings = [0];
+  let output = [basePrice + (toppings * 2)];
+  if (this.size === "Medium") {
+    output[0] -= 2;
   }
-  if ([#size].toString("").includes("Large")) {
-    orderArray.push("You ordered a large pie with the following toppings: " + [toppings]);
+  if (this.size === "Large") {
+    output[0] += 2;
   }
-}
-return (orderArray + "");
-}
-
-
+  return ("$" + output);
+};
 
 // UI Logic
 
 $(document).ready(function () {
-  attachContactListeners();
+
   $("form#options").submit(function (event) {
     event.preventDefault();
 
-    const inputtedToppings = $("input:checkbox[name=pizza-topping]:checked").val();
+    let inputtedToppings = [];
+
+    $("#cart").show();
+    $("input:checkbox[name=pizza-topping]:checked").each(function () {
+      const toppingsInput = $(this).val();
+      inputtedToppings.push(" " + toppingsInput.toLowerCase().toString());
+
+    })
     const inputtedSize = $('input:radio[name=size]:checked').val();
 
-    $("input:checkbox[name=pizza-topping]:checked").each(function () {
-      const toppings = $(this).val();
-    }
-    $('input:radio[name=size]:checked').val();
+    let myPizza = new Pizza(inputtedToppings, inputtedSize);
 
-    let PizzaOrder = new Pizza(inputtedToppings, inputtedSize);
-    $("#cart").text(PizzaOrder + "");
+    let result = ("One" + " " + myPizza.size.toLowerCase() + " " + "pizza" + " " + "with" + " " + inputtedToppings + ". " + "<br><br>" + "Your total today is" + " " + myPizza.cost()) + ". Thank you for your business!";
+
+    $("#cart").append(result);
+    console.log(result);
+
     $('#options').hide();
-
-    const toppings = $("#pizza-topping").val ();
-    const result = output(number);
-    $("#output").html(result);
-    
   });
-});
-
-$(document).ready(function(){
-  $("form#options").submit(function(event){
-    event.preventDefault();
-    const toppings = $("#pizza-topping").val ();
-    const size = $("#size").val();
-    const result = output([toppings], size);
-    $("#output").html(result);
-  });
-});
+})
 
 
 
@@ -70,64 +59,4 @@ $(document).ready(function(){
 
 
 
-// // Business Logic
-// // function CustomPizza(toppings, size) {
-// //   this.toppings = toppings;
-// //   this.size = size;
-// // }
 
-// // CustomPizza.prototype.Order = function() {
-// //   return this.size + " " + this.toppings;
-// // };
-
-
-
-
-
-
-// Total.prototype.calculateTotal = function() {
-
-//   const basePrice = 10;
-//   const toppings = [0];
-//   let output = [basePrice + (toppings * 2)];
-//   if (size === Medium) {
-//     output[0] -= 2;
-//   }
-//   if (size === Large) {
-//     output[0] += 2;
-//   }
-//   return output;
-// };
-
-// function cost(toppings, size) {
-//   this.toppings = toppings;
-//   this.size = size;
-//   this.price = this.calculateTotal();
-// }
-
-
-// UI Logic
-
-// $(document).ready(function() {
-
-//   $("form#options").submit(function (event) {
-//     event.preventDefault();
-//     $("#cart").show();
-//     $("input:checkbox[name=pizza-topping]:checked").each(function () {
-//       const toppings = $(this).val();
-//       $("#cart").append(toppings + "<br>");
-//     });
-//     $('#options').hide();
-//     });
-//   });
-
-
-
-
-  // $("form#options2").submit(function (event) {
-    //   event.preventDefault();
-    //   $("#options2").show();
-    //   $('input:radio[name=size]:checked').each(function () {
-    //     const size = $(this).val();
-    //     $("#finalCart").append(toppings + "<br>");
-    //   });

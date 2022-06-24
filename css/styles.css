@@ -55,7 +55,7 @@ nav a:link, nav a:visited, nav a:hover, nav a:active {
 }
 
 .navbar {
-  width: 400px;
+  width: 40%;
   height: 100%;
   margin: 2%;
   align-content: center;
@@ -69,7 +69,7 @@ nav a:link, nav a:visited, nav a:hover, nav a:active {
   top: 0; 
   left: 0;
   background: white;
-  background: url(/img/tile.JPG);
+  background: url(../img/tile.JPG);
   border:solid black;
   border-width: 10px;
   box-sizing: border-box;
@@ -151,9 +151,10 @@ input[type=submit]:hover {
   background-color: white;
   padding-left: 40px;
   padding-right: 40px;
-  margin-left: 40%;
+  margin-left: 50%;
+  position: relative;
 }
 
-#cart, #finalCart, #options2 {
+#cart {
   display: none;
 }

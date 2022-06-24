@@ -19,19 +19,12 @@ This pizza parlor site allows a user to choose a size and one or more individual
 
 ## Tests
 
-# _Describe: function()_
+# _Describe: Pizza()_
 
-Test: "It should allow a user to select size"
-Code: function();
-Expected Output: Small, medium, or large
+Test: "It should return a Pizza object with two properties for toppings and size"
+Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
+Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 
-Test: "It should allow a user to select toppings"
-Code: function();
-Expected Output: An array of toppings
-
-Test: "It should allow a user to see the final cost"
-Code: function();
-Expected Output: A final cost
 
 ## Setup/Installation Requirements
 
