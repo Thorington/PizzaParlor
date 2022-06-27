@@ -1,6 +1,5 @@
 
 // Business Logic
-
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
@@ -10,7 +9,8 @@ Pizza.prototype.cost = function () {
 
   const basePrice = 20;
   const toppings = [this.toppings.length];
-  let output = [basePrice + (toppings * 2)];
+  let output = 
+[basePrice + (toppings * 2)];
   if (this.size === "Medium") {
     output[0] += 0;
   }

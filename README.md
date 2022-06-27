@@ -1,4 +1,4 @@
-# _Indepedent Project #4: Pizza Parlor_
+# _Independent Project #4: Pizza Parlor_
 
 #### Contributors: _**Claire Thorington**_
 
@@ -15,15 +15,21 @@
 
 ## Description
 
-This pizza parlor site allows a user to choose a size and one or more individual toppings and see the final cost.
+This pizza company site allows a user to choose a size and one or more individual toppings and see the final cost.
 
 ## Tests
 
 # _Describe: Pizza()_
 
 Test: "It should return a Pizza object with two properties for toppings and size"
-Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
-Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
+Code: const myPizza = new Pizza(["canned olives", "leftover salmon"], "medium");
+Expected Output: Pizza { toppings: ["canned olives", "leftover salmon"], size: "medium" }
+
+# _Describe: Pizza.prototype.cost()_
+
+Test: "It should return the cost of a pizza, given the size and number of toppings"
+Code: myPizza.cost();
+Expected Output: "$24"
 
 
 ## Setup/Installation Requirements
@@ -34,7 +40,7 @@ Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 
 ## Known Bugs
 
-* None
+* None!
 
 ## License
 
